@@ -1,0 +1,25 @@
+public class Main {
+    public static boolean t(int i){
+        int f=0, x=i;
+        while (x>0){
+            f=10*f+x%10;
+            x/=10;
+        }
+        return i==f;
+}
+    public static void main(String[] args){
+        int ts=-1;
+        for(int a=100;a<=999;a++){
+            if(a*999<=ts){
+                break;
+            }
+            for(int b=999;b>=a;b--){
+                int c=a*b;
+                if(ts<c&&t(c)){
+                    ts=c;
+                }
+            }
+        }
+        System.out.println(ts);
+    }
+}
