@@ -9,11 +9,11 @@ public class Main {
 }
     public static void main(String[] args){
         int ts=-1;
-        for(int a=100;a<=999;a++){
+        for(int a=100;a<1000;a++){
             if(a*999<=ts){
                 break;
             }
-            for(int b=999;b>=a;b--){
+            for(int b=100;b<=a;b++){
                 int c=a*b;
                 if(ts<c&&t(c)){
                     ts=c;
