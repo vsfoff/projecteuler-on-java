@@ -1,0 +1,22 @@
+public class Main {
+    public static int ex5(){
+        int chislo=2520;
+        boolean find=false;
+        while (!find){
+            chislo+=2520;
+            boolean find2=true;
+            for (int i=11;i<=20;i++){
+                if(chislo%i!=0){
+                    find2=false; break;
+                }
+            }
+            if(find2){
+                find=true;
+            }
+        }
+        return chislo;
+    }
+    public static void main(String[] args){
+        System.out.println(ex5());
+    }
+}
